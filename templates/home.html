@@ -89,4 +89,12 @@
     </table>
 </div>
 
+<script type="text/javascript" src="{{url_for('static', filename='js/diskPage.js')}}"></script>
+<script>
+    set_ListOfMusics(JSON.parse('{{musicJ|tojson|safe}}'));
+    $(document).ready(function(){
+    startMusic();
+    });
+</script>
+
 {% endblock %}
